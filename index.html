@@ -1,1 +1,69 @@
-Hello llama friend!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lola the Llama's Llama Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e6d6;
+            color: #4f4e4d;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .facts {
+            font-size: 1.2em;
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #4f4e4d;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 0.5em 1em;
+            margin-top: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #7ec0ee;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Lola the Llama's Llama Website</h1>
+    <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?fit=crop&w=500&h=500&q=80" alt="Llama picture">
+    <div class="facts" id="fact-container">
+        <p id="fact">Click the button below to learn a fun fact about llamas!</p>
+        <button onclick="showFact()">Show me a llama fact!</button>
+    </div>
+    <script>
+        const facts = [
+            "Llamas are members of the camelid family, which also includes camels, alpacas, vicuñas, and guanacos.",
+            "Llamas have been domesticated for over 5,000 years and were used by the ancient Incas as pack animals.",
+            "A fully grown llama can weigh between 290 and 440 pounds and can carry about 25% of their body weight.",
+            "Llamas are social animals and prefer to live in groups, called herds.",
+            "Llamas have a unique way of communicating through a series of hums, clicks, and other noises.",
+            "Llamas are known for their ability to spit when threatened, but they usually only do this to other llamas and not humans."
+        ];
+
+        function showFact() {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("fact").innerHTML = randomFact;
+        }
+    </script>
+</body>
+</html>
